@@ -18,6 +18,7 @@ For example,
 ```
   eval "(a ^ b)" ["a", "b"];
 ```
+
 with
 ```
   val it = true : bool
@@ -25,6 +26,7 @@ with
 and
   eval "(a ^ b)" ["a"];
 ```
+
 with
 ```
   val it = false : bool
@@ -34,6 +36,7 @@ Constant propagation is similar:
 ```
   prop "(a !v nil)";
 ```
+
 with REPL response
 ```
   (a !v a)
