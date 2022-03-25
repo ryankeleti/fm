@@ -331,7 +331,7 @@ end = struct
     | as_sexp (Ncp_bool false) = S.SYMBOL (Atom.atom "nil")
     | as_sexp (Ncp_ncfm p) = as_sexp_nc p
   and as_sexp_nc (Nc_var v) = S.SYMBOL (Atom.atom v)
-    | as_sexp_nc (Nc_nor (q, r)) = S.LIST [as_sexp_nc q, S.SYMBOL (Atom.atom "v"), as_sexp_nc r]
+    | as_sexp_nc (Nc_nor (q, r)) = S.LIST [as_sexp_nc q, S.SYMBOL (Atom.atom "!v"), as_sexp_nc r]
 
   fun pp_cp p w =
     let
